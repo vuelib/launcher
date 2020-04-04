@@ -86,7 +86,7 @@ export default class Launcher extends Vue {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app-launcher {
   position: fixed;
   top: 0;
@@ -108,4 +108,5 @@ export default class Launcher extends Vue {
   font-size: 20px;
   line-height: 40px;
 }
+@import '~@essencia-ui/vue-santorini/src/assets/scss/main';
 </style>

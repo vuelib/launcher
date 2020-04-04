@@ -1,7 +1,5 @@
 import Vue from "vue";
 import App from "./App.vue";
-import router from "./kernel/router";
-// import store from "./store";
 import singleSpaVue from 'single-spa-vue';
 
 Vue.config.productionTip = false;
@@ -14,13 +12,19 @@ Vue.use(Request);
 import Auth from './kernel/authentication';
 Vue.use(Auth);
 
+// Router
+import router from "./kernel/router";
+
+// Essencia UI
+import EssenciaUI from '@essencia-ui/vue-santorini';
+Vue.use(EssenciaUI);
+
 const vueLifecycles = singleSpaVue({
   Vue,
   appOptions: {
     el: '#launcher',
     render: (r: any) => r(App),
     router,
-    // store,
   } 
 });
 

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../../views/Home.vue';
-import AuthMiddleware from '../middleware/AuthMiddleware';
+import { AuthMiddleware } from '../middleware';
 
 Vue.use(VueRouter);
 
@@ -20,8 +20,14 @@ const routes = [
     },
     component: Home,
   },
+  {
+    path: '/logout',
+    name: 'Logout',
+    meta: {
+      middleware: [AuthMiddleware],
+    },
+  },
 ];
-
 
 const router = new VueRouter({
   mode: 'history',

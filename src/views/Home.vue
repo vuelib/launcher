@@ -1,5 +1,13 @@
 <template>
-  <div>carlos</div>
+  <div style="text-align: center; font-size: 24px; color: #fff; padding-top: 30px;">
+    DASH - PROJECT LAUNCHER
+    <button
+      @click="toCompanies()"
+      style="display: block; margin: 20px auto; padding: 10px 20px; background: #eee; border: none; border-radius: 6px; cursor: pointer;"
+    >
+      EMPRESAS
+    </button>
+  </div>
 </template>
 
 <script lang="ts">
@@ -13,6 +21,10 @@ export default class Home extends Vue {
    */
   constructor() {
     super();
+  }
+
+  private toCompanies() {
+    this.$vueRouter.push('/companies');
   }
 }
 </script>
